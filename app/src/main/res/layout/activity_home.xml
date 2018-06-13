@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#90AFC5"
+    tools:context="getset.guidance.career.getset.Home">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_220sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/logo" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/facebook"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="@drawable/textbox"
+            android:drawableLeft="@drawable/facebooklayout"
+            android:gravity="center"
+            android:text="@string/fblogin"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_15sdp"
+            android:drawableStart="@drawable/facebooklayout" />
+
+        <TextView
+            android:id="@+id/google"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="@drawable/textbox"
+            android:drawableLeft="@drawable/googlelayout"
+            android:gravity="center"
+            android:text="@string/glogin"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_15sdp"
+            android:drawableStart="@drawable/googlelayout" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="@drawable/textbox"
+            android:drawableLeft="@drawable/phonelayout"
+            android:gravity="center"
+            android:text="@string/phlogin"
+            android:textAlignment="center"
+            android:drawablePadding="-10dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_15sdp"
+            android:drawableStart="@drawable/phonelayout" />
+    </LinearLayout>
+</RelativeLayout>
