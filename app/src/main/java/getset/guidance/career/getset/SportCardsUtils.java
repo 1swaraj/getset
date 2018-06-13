@@ -27,7 +27,7 @@ public class SportCardsUtils {
                     .withSportTitle("Personality")
                     .withSportSubtitle("")
                     .withSportRound("")
-                    .withImageResId(R.drawable.aptitude)
+                    .withImageResId(R.drawable.index)
                     .withBackgroundColorResId(R.color.blue)
                     .build());
 
@@ -47,6 +47,7 @@ public class SportCardsUtils {
             sportCardModels.add(SportCardModel
                     .newBuilder()
                     .withSportTitle("Intrest")
+                    .withImageResId(R)
                     .withBackgroundColorResId(R.color.portland_orange)
                     .build());
 
