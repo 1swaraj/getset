@@ -15,7 +15,7 @@ public class SportCardsUtils {
             sportCardModels.add(SportCardModel
                     .newBuilder()
                     .withSportTitle("Apptitude")
-                    .withImageResId(R.drawable.aptitude)
+                    .withImageResId(R.drawable.abc)
                     .withBackgroundColorResId(R.color.brown)
                     .build());
 
@@ -37,7 +37,7 @@ public class SportCardsUtils {
             sportCardModels.add(SportCardModel
                     .newBuilder()
                     .withSportTitle("Study Habits")
-                    .withImageResId(R.drawable.aptitude)
+                    .withImageResId(R.drawable.study)
                     .withBackgroundColorResId(R.color.usc_gold)
                     .build());
 
@@ -47,7 +47,7 @@ public class SportCardsUtils {
             sportCardModels.add(SportCardModel
                     .newBuilder()
                     .withSportTitle("Intrest")
-                    .withImageResId(R)
+                    .withImageResId(R.drawable.images)
                     .withBackgroundColorResId(R.color.portland_orange)
                     .build());
 
