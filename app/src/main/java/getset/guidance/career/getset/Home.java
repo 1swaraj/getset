@@ -216,6 +216,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
     }
     private void postLogin()
     {
+        SportCardsUtils.generateSportCards();
         Intent intent= new Intent(this ,Selection.class);
         intent.putExtra("Username","12345");
         startActivity(intent);

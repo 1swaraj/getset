@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/getset.iml" filepath="$PROJECT_DIR$/getset.iml" />
       <module fileurl="file://$PROJECT_DIR$/getset-master.iml" filepath="$PROJECT_DIR$/getset-master.iml" />
     </modules>
   </component>

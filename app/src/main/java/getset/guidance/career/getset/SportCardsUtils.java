@@ -7,10 +7,9 @@ import java.util.Collection;
 import java.util.List;
 
 public class SportCardsUtils {
-
-    public static Collection<SportCardModel> generateSportCards() {
-        List<SportCardModel> sportCardModels = new ArrayList<>(4);
-
+    public static List<SportCardModel> sportCardModels;
+    public static void generateSportCards() {
+        sportCardModels= new ArrayList<>(4);
         {
             sportCardModels.add(SportCardModel
                     .newBuilder()
@@ -52,6 +51,5 @@ public class SportCardsUtils {
                     .build());
 
         }
-        return sportCardModels;
     }
 }

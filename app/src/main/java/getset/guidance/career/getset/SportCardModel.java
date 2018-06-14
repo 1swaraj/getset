@@ -101,6 +101,7 @@ public class SportCardModel implements Parcelable {
         }
     };
 
+
     /**
      * {@code SportCardModel} builder static inner class.
      */

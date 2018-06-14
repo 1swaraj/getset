@@ -1,6 +1,7 @@
 package getset.guidance.career.getset.fragments.full_info_fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
@@ -16,17 +17,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
+import getset.guidance.career.getset.Home;
 import getset.guidance.career.getset.R;
 import getset.guidance.career.getset.AthleticModel;
 import getset.guidance.career.getset.Country;
+import getset.guidance.career.getset.Selection;
 import getset.guidance.career.getset.SportCardModel;
-
 import java.util.ArrayList;
 import java.util.List;
 
+import static getset.guidance.career.getset.SportCardsUtils.sportCardModels;
 
-public class FullInfoTabFragment extends Fragment {
+
+public class FullInfoTabFragment extends Fragment implements View.OnClickListener {
 
     private static final String EXTRA_SRORT_CARD_MODEL = "EXTRA_SRORT_CARD_MODEL";
     //    String transitionTag;
@@ -34,7 +39,7 @@ public class FullInfoTabFragment extends Fragment {
     private Toolbar toolbar;
     private ImageView ivPhoto;
     private RecyclerView rvAthletics;
-
+    private TextView textView;
     public static FullInfoTabFragment newInstance(SportCardModel sportCardModel) {
         FullInfoTabFragment fragment = new FullInfoTabFragment();
         Bundle args = new Bundle();
@@ -61,9 +66,17 @@ public class FullInfoTabFragment extends Fragment {
         toolbar = (Toolbar) view.findViewById(R.id.toolbar);
         ivPhoto = (ImageView) view.findViewById(R.id.ivPhoto);
         rvAthletics = (RecyclerView) view.findViewById(R.id.rvAthletics);
+        textView=view.findViewById(R.id.startattempt);
+        textView.setOnClickListener(this);
         return view;
-    }
 
+    }
+    @Override
+    public void onClick(View v) {
+        sportCardModels.remove(2);
+        Intent intent = new Intent(getActivity(), Selection.class);
+        startActivity(intent);
+    }
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

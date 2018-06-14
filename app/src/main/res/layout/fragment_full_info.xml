@@ -28,6 +28,8 @@
         android:layout_below="@+id/ivPhoto">
 
         <TextView
+            android:clickable="true"
+            android:id="@+id/startattempt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"

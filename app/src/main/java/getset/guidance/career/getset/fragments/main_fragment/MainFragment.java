@@ -19,6 +19,8 @@ import getset.guidance.career.getset.R;
 import getset.guidance.career.getset.SportCardsUtils;
 import getset.guidance.career.getset.fragments.full_info_fragment.FullInfoTabFragment;
 
+import static getset.guidance.career.getset.SportCardsUtils.sportCardModels;
+
 
 public class MainFragment extends Fragment {
     private FanLayoutManager mFanLayoutManager;
@@ -60,7 +62,7 @@ public class MainFragment extends Fragment {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
         mAdapter = new SportCardsAdapter(getContext());
-        mAdapter.addAll(SportCardsUtils.generateSportCards());
+        mAdapter.addAll(sportCardModels);
 
         mAdapter.setOnItemClickListener(new SportCardsAdapter.OnItemClickListener() {
             @Override
