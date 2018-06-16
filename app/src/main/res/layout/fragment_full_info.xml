@@ -29,12 +29,60 @@
 
         <TextView
             android:clickable="true"
-            android:id="@+id/startattempt"
+            android:id="@+id/opt1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="Start Attempt"
-            android:textSize="@dimen/_30sdp"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:clickable="true"
+            android:layout_below="@+id/opt1"
+            android:id="@+id/opt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:clickable="true"
+            android:id="@+id/opt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_15sdp"
+            android:layout_below="@+id/opt2"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:clickable="true"
+            android:id="@+id/opt4"
+            android:layout_below="@+id/opt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:clickable="true"
+            android:id="@+id/opt5"
+            android:layout_below="@+id/opt4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:clickable="true"
+            android:id="@+id/opt6"
+            android:layout_below="@+id/opt5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_15sdp"
             android:textStyle="bold" />
 
     </RelativeLayout>

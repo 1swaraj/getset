@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import getset.guidance.career.getset.Home;
 import getset.guidance.career.getset.R;
@@ -39,7 +40,7 @@ public class FullInfoTabFragment extends Fragment implements View.OnClickListene
     private Toolbar toolbar;
     private ImageView ivPhoto;
     private RecyclerView rvAthletics;
-    private TextView textView;
+    private TextView tv1,tv2,tv3,tv4,tv5,tv6;
     public static FullInfoTabFragment newInstance(SportCardModel sportCardModel) {
         FullInfoTabFragment fragment = new FullInfoTabFragment();
         Bundle args = new Bundle();
@@ -66,8 +67,12 @@ public class FullInfoTabFragment extends Fragment implements View.OnClickListene
         toolbar = (Toolbar) view.findViewById(R.id.toolbar);
         ivPhoto = (ImageView) view.findViewById(R.id.ivPhoto);
         rvAthletics = (RecyclerView) view.findViewById(R.id.rvAthletics);
-        textView=view.findViewById(R.id.startattempt);
-        textView.setOnClickListener(this);
+        tv1=view.findViewById(R.id.opt1);
+        tv2=view.findViewById(R.id.opt2);
+        tv3=view.findViewById(R.id.opt3);
+        tv4=view.findViewById(R.id.opt4);
+        tv5=view.findViewById(R.id.opt5);
+        tv6=view.findViewById(R.id.opt6);
         return view;
 
     }
@@ -80,6 +85,25 @@ public class FullInfoTabFragment extends Fragment implements View.OnClickListene
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        switch(mSportCardModel.getSportTitle().charAt(0))
+        {
+            case 'A':
+                tv1.setText("Numerical Ability");
+                tv2.setText("Reasoning Ability");
+                tv3.setText("Verbal Ability");
+                tv4.setText("Spatial Ability");
+                tv5.setText("Rapid Evaluation Ability");
+                tv6.setText("Cognitive Ability");
+                break;
+            case 'S':
+                tv1.setText("Learning Techniques");
+                tv2.setText("Memory");
+                tv3.setText("Examination Techiniques");
+                tv4.setVisibility(View.GONE);
+                tv5.setVisibility(View.GONE);
+                tv6.setVisibility(View.GONE);
+                break;
+        }
 
         toolbar.setTitle(mSportCardModel.getSportTitle());
         toolbar.setNavigationIcon(R.drawable.ic_back);
