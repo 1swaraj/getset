@@ -16,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import getset.guidance.career.getset.R;
 import getset.guidance.career.getset.AthleticModel;
@@ -61,6 +62,9 @@ public class FullInfoTabFragment extends Fragment {
         toolbar = (Toolbar) view.findViewById(R.id.toolbar);
         ivPhoto = (ImageView) view.findViewById(R.id.ivPhoto);
         rvAthletics = (RecyclerView) view.findViewById(R.id.rvAthletics);
+
+
+
         return view;
     }
 

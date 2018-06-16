@@ -3,7 +3,7 @@
     android:id="@+id/fragment_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#90AFC5"
+    android:background="#FFFFFF"
     tools:context=".fragments.main_fragment.MainFragment">
 
     <android.support.v7.widget.Toolbar
@@ -21,7 +21,7 @@
         android:layout_marginBottom="@dimen/_20sdp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
-        android:src="@drawable/logo"
+        android:src="@drawable/success"
         android:layout_below="@+id/toolbarMain"
         android:clickable="true"/>
     <RelativeLayout

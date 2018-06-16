@@ -20,12 +20,13 @@
         android:transitionName="shared"
         tools:layout_height="@dimen/_100sdp" />
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/scopeHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:layout_below="@+id/ivPhoto">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="148dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -35,12 +36,20 @@
             android:textSize="@dimen/_30sdp"
             android:textStyle="bold" />
 
-    </RelativeLayout>
+        <TextView
+            android:id="@+id/first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/_200sdp" />
+
+    </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvAthletics"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/scopeHeader" />
+        android:layout_height="251dp"
+        android:layout_below="@+id/scopeHeader"
+        android:layout_marginTop="-96dp" />
 
 </RelativeLayout>
