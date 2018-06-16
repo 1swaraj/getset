@@ -24,8 +24,8 @@
         android:id="@+id/scopeHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:layout_below="@+id/ivPhoto">
+        android:layout_below="@+id/ivPhoto"
+        android:layout_marginTop="@dimen/_15sdp">
 
         <TextView
             android:clickable="true"
@@ -90,7 +90,7 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvAthletics"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="251dp"
         android:layout_below="@+id/scopeHeader" />
 
 </RelativeLayout>

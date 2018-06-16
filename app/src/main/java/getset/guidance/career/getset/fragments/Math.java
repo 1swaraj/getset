@@ -8,12 +8,12 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
 
-public class MemoryGame extends AppCompatActivity {
+public class Math extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_memorygame);
-        WebView webView = findViewById(R.id.memory_game);
+        setContentView(R.layout.math);
+        WebView webView = findViewById(R.id.math);
         webView.getSettings().setJavaScriptEnabled(true);
         WebViewClient mWebViewClient = new WebViewClient() {
             @Override
@@ -22,13 +22,13 @@ public class MemoryGame extends AppCompatActivity {
             }
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                Intent intent = new Intent(MemoryGame.this, Math.class);
-                intent.putExtra("Time for Memory Game",url);
+                Intent intent = new Intent(Math.this, TOH.class);
+                intent.putExtra("Be Ready for Math Game",url);
                 startActivity(intent);
                 return true; //don't allow WebView to load url
             }
         };
         webView.setWebViewClient(mWebViewClient);
-        webView.loadUrl("file:///android_asset/memory_game/index.html");
+        webView.loadUrl("file:///android_asset/Math/index.html");
     }
 }
