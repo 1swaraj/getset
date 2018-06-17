@@ -13,7 +13,7 @@ public class SportCardsUtils {
         {
             sportCardModels.add(SportCardModel
                     .newBuilder()
-                    .withSportTitle("Apptitude")
+                    .withSportTitle("Aptitude")
                     .withImageResId(R.drawable.abc)
                     .withBackgroundColorResId(R.color.brown)
                     .build());

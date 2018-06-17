@@ -25,6 +25,7 @@ import getset.guidance.career.getset.R;
 import getset.guidance.career.getset.AthleticModel;
 import getset.guidance.career.getset.Country;
 import getset.guidance.career.getset.Selection;
+import getset.guidance.career.getset.SpatialAptitude;
 import getset.guidance.career.getset.SportCardModel;
 import java.util.ArrayList;
 import java.util.List;
@@ -73,15 +74,24 @@ public class FullInfoTabFragment extends Fragment implements View.OnClickListene
         tv4=view.findViewById(R.id.opt4);
         tv5=view.findViewById(R.id.opt5);
         tv6=view.findViewById(R.id.opt6);
+        tv1.setOnClickListener(this);
+        tv2.setOnClickListener(this);
+        tv3.setOnClickListener(this);
+        tv4.setOnClickListener(this);
+        tv5.setOnClickListener(this);
+        tv6.setOnClickListener(this);
         return view;
+    }
 
-    }
-    @Override
     public void onClick(View v) {
-        sportCardModels.remove(2);
-        Intent intent = new Intent(getActivity(), Selection.class);
-        startActivity(intent);
+        if (v.equals(tv4)) {
+            if(tv4.getText().equals("Spatial Ability")) {
+                Intent intent = new Intent(getActivity(), SpatialAptitude.class);
+                this.startActivity(intent);
+            }
+        }
     }
+
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

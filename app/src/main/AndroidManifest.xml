@@ -40,7 +40,8 @@
         </activity>
         <activity android:name=".MemoryGame" />
         <activity android:name=".TOH" />
-        <activity android:name=".Selection"></activity>
+        <activity android:name=".Selection" />
+        <activity android:name=".SpatialAptitude"></activity>
     </application>
 
 </manifest>
