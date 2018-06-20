@@ -81,7 +81,7 @@ BasicGame.Game.prototype = {
         var temp;
         for(var i=0;i<solution.length;i++){
             temp = solution.charCodeAt(i) - 64;
-            if(temp>15){
+            if(temp>8){
                 this.playermoves.length = 0;
                 return;
             }
@@ -110,11 +110,11 @@ BasicGame.Game.prototype = {
     },
 
     resettiles : function(){
-        for(var i=0;i<4;i++){
-            for(var j=0;j<4;j++){
-                var tilenumber = (i*4)+j;
+        for(var i=0;i<3;i++){
+            for(var j=0;j<3;j++){
+                var tilenumber = (i*3)+j;
                 this.matrix[i][j] = tilenumber+1;
-                if(tilenumber<15){
+                if(tilenumber<8){
                     // if(this.showmove==true){
                     //     this.add.tween(this.tiles[tilenumber]).to({x : 83+j*65,y : 315+i*72},1000, Phaser.Easing.Sinusoidal.InOut, true);
                     // }
@@ -157,10 +157,10 @@ BasicGame.Game.prototype = {
         this.moves.length = 0;
         var oldk = -1;
         while(this.moves.length<totalsteps){
-            var k = this.rnd.integerInRange(1,15);
+            var k = this.rnd.integerInRange(1,8);
             while(this.shiftTile(this.tiles[k-1])=='dont'||k==oldk){
                 this.shiftTile(this.tiles[k-1]);
-                k = this.rnd.integerInRange(1,15);
+                k = this.rnd.integerInRange(1,8);
             }
             this.moves.push(k); 
             oldk = k;
@@ -170,10 +170,10 @@ BasicGame.Game.prototype = {
         this.totalclicks++;
         this.clicktext.setText(this.totalclicks+' clicks');
         var flag = true;
-        for(var i=0;i<4;i++){
-            for(var j=0;j<4;j++){
-                if((i*4)+j+1!=16){
-                    if(this.matrix[i][j]!=(i*4)+j+1){
+        for(var i=0;i<3;i++){
+            for(var j=0;j<3;j++){
+                if((i*3)+j+1!=9){
+                    if(this.matrix[i][j]!=(i*3)+j+1){
                         flag = false;
                         return;
                     }      
@@ -193,8 +193,8 @@ BasicGame.Game.prototype = {
         var no = box.no;
         var x,y = 0;
         var moveDir =  'dont';
-        for(var i=0;i<4;i++){
-            for(var j=0;j<4;j++){
+        for(var i=0;i<3;i++){
+            for(var j=0;j<3;j++){
                 if(this.matrix[i][j]==no){
                     x = i;
                     y = j;
@@ -249,12 +249,12 @@ BasicGame.Game.prototype = {
     initmatrix : function(){
         this.matrix = [];
         this.tiles = [];
-        for(var i=0;i<4;i++){
+        for(var i=0;i<3;i++){
             this.matrix[i] = [];
-            for(var j=0;j<4;j++){
-                var tilenumber = (i*4)+j;
+            for(var j=0;j<3;j++){
+                var tilenumber = (i*3)+j;
                 this.matrix[i][j] = tilenumber+1;
-                if(tilenumber<15){
+                if(tilenumber<8){
                     var k = this.add.sprite(83+j*65,315+i*72,'spriteset'); //x=83 and y=315 to get the tiles inside the box - trial and error
                     k.frameName = (tilenumber+1).toString() + '.png';
                     k.anchor.setTo(0.5,0.5);
@@ -277,7 +277,7 @@ BasicGame.Game.prototype = {
     },
 
     chooseTile : function(x,y){
-        if(x==3&&y==3){
+        if(x==2&&y==2){
             if(this.matrix[x-1][y]==0){
                 return 'up';
             }
@@ -285,7 +285,7 @@ BasicGame.Game.prototype = {
                 return 'left';
             }
         }
-        else if(x==0&&y==3){
+        else if(x==0&&y==2){
             if(this.matrix[x+1][y]==0){
                 return 'down';
             }
@@ -301,7 +301,7 @@ BasicGame.Game.prototype = {
                 return 'right';
             }
         }
-        else if(x==3&&y==0){
+        else if(x==2&&y==0){
             if(this.matrix[x-1][y]==0){
                 return 'up';
             }
@@ -309,7 +309,7 @@ BasicGame.Game.prototype = {
                 return 'right';
             }
         }
-        else if(x==3){
+        else if(x==2){
             if(this.matrix[x-1][y]==0){
                 return 'up';
             }
@@ -331,7 +331,7 @@ BasicGame.Game.prototype = {
                 return 'right';
             }
         }
-        else if(y==3){
+        else if(y==2){
             if(this.matrix[x+1][y]==0){
                 return 'down';
             }
@@ -371,7 +371,7 @@ BasicGame.Game.prototype = {
     },
 
     switchAlpha : function(a){
-            for(var i=0;i<15;i++){
+            for(var i=0;i<8;i++){
                 this.tiles[i].alpha = a;  
             }
     },
@@ -380,7 +380,7 @@ BasicGame.Game.prototype = {
         this.totaltime = 0;
         this.totalclicks = 0;
         this.clicktext.setText('0 clicks');
-        this.timertext.setText('0 seconds');
+        this.timertext.setText('0 s');
     },
 
     convertToUrl : function(){

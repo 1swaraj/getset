@@ -21,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import getset.guidance.career.getset.Home;
+import getset.guidance.career.getset.MemoryGame;
 import getset.guidance.career.getset.R;
 import getset.guidance.career.getset.AthleticModel;
 import getset.guidance.career.getset.Country;
@@ -87,6 +88,13 @@ public class FullInfoTabFragment extends Fragment implements View.OnClickListene
         if (v.equals(tv4)) {
             if(tv4.getText().equals("Spatial Ability")) {
                 Intent intent = new Intent(getActivity(), SpatialAptitude.class);
+                this.startActivity(intent);
+            }
+        }
+        else if (v.equals(tv2))
+        {
+            if(tv2.getText().equals("Memory")) {
+                Intent intent = new Intent(getActivity(), MemoryGame.class);
                 this.startActivity(intent);
             }
         }
