@@ -41,7 +41,9 @@
         <activity android:name=".MemoryGame" />
         <activity android:name=".TOH" />
         <activity android:name=".Selection" />
-        <activity android:name=".SpatialAptitude"></activity>
+        <activity android:name=".SpatialAptitude" />
+        <activity android:name=".fragments.ReadingHabit" />
+        <activity android:name=".ReadingHabits"></activity>
     </application>
 
 </manifest>
