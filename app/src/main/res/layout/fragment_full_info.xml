@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_48sdp"
+        app:titleMargin="@dimen/_3sdp"
+        app:titleTextColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/ivPhoto"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:adjustViewBounds="true"
+        android:transitionName="shared"
+        tools:layout_height="@dimen/_100sdp" />
+
+    <RelativeLayout
+        android:id="@+id/scopeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivPhoto"
+        android:layout_marginTop="@dimen/_15sdp">
+
+        <TextView
+            android:clickable="true"
+            android:id="@+id/opt1"
+            android:textColor="@color/white"
+            android:padding="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_below="@+id/opt1"
+            style="@android:style/Widget.Holo.Light.Button"
+            android:id="@+id/startact"
+            android:text="Start"
+            android:layout_centerHorizontal="true"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/button_border"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:layout_weight="1"
+            android:textSize="@dimen/_16sdp"
+            android:textColor="#fc9247" />
+
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvAthletics"
+        android:layout_width="match_parent"
+        android:layout_height="251dp"
+        android:layout_below="@+id/scopeHeader" />
+
+</RelativeLayout>

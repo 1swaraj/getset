@@ -1,0 +1,147 @@
+$pink: #e91e63;
+$deep-purple: #673ab7;
+$indigo: #3f51b5;
+$cyan: #00bcd4;
+$light-green: #8bc34a;
+$yellow: #ffeb3b;
+$amber: #ffc107;
+$orange: #ff9800;
+$white: #ffffff;
+$black: #94bc63;
+
+@mixin dimensions($width: null, $height: $width) {
+	width: $width;
+	height: $height;
+}
+
+%reset {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	@include dimensions($width: 100%);
+	@extend %reset;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+	@extend %reset;
+	@include dimensions($width:100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+#canves {
+	@include dimensions($width: 300px, $height: 240px);
+	display: flex;
+	padding: 0;
+	justify-content: center;
+	align-items: flex-end;
+	position: relative;
+	#score-panel {
+		@include dimensions($width: 180px, $height: 53px);
+		@extend %reset;
+		position: absolute;
+		top: 0px;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 23px;
+		text-align: center;
+		li {
+			list-style: none;
+			display: inline-block;
+			&:last-child {
+				font-family: 'Coda', cursive;
+				display: block;
+				font-size: 7px;
+				line-height: 1;
+			}
+		}
+	}
+}
+
+.restart {
+	cursor: pointer;
+	position: absolute;
+	bottom: -60px;
+	left: 50%;
+	font-size: 21px;
+	transform: translateX(-50%);
+}
+
+.tower {
+	@include dimensions($width: 115px, $height: 117px);
+	border-bottom: 5px solid #fff;
+	border-radius: 7px;
+	position: relative;
+	text-align: center;
+	padding: 0;
+	margin: 0 25px 0 0;
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+	cursor: pointer;
+	&#tower-3 {
+		margin: 0;
+	}
+	&:before {
+		@include dimensions($width: 4px, $height: 116px);
+		content: '';
+		display: block;
+		background: $black;
+		position: absolute;
+		bottom: -2px;
+		left: calc(50% - 2px);
+		z-index: 10;
+		border-radius: 30px;
+	}
+}
+
+.disk {
+	list-style: none;
+	height: 16px;
+	display: block;
+	border-radius: 9px;
+	font-size: 0;
+	z-index: 20;
+	&.hold {
+		position: absolute;
+		top: -50px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.swal2-overlay {
+	background-color: rgba(255,255,255,1);
+}
+
+@for $i from 1 through 7 {
+	.disk-#{$i} {
+		width: 35px * $i / 2;
+		@if $i == 1 {
+			background-color: $pink;
+		} @else if $i == 2 {
+			background-color: $deep-purple;
+		} @else if $i == 3 {
+			background-color: $indigo;
+		} @else if $i == 4 {
+			background-color: $cyan;
+		} @else if $i == 5 {
+			background-color: $light-green;
+		} @else if $i == 6 {
+			background-color: $amber
+		} @else if $i == 7 {
+			background-color: $orange
+		}
+	}
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/simplegrid.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+      <link type="text/css" rel="stylesheet" href="css/css.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    </head>
+
+    <body>
+    <div id="mainContent" class="container card-panel white">
+
+      <div class="card-panel blue darken-2">
+        <div class="row" id="title">
+          <div class="col s12 left-align white-text">
+            <h2 id="top-title">Rapid Evaluation Ability</h2>
+          </div>
+        </div>
+        <div class="col s12 left-align white-text"><h6 id="tag-line">Find the jumbled word</h6></div>
+      </div>
+
+      <div class="row no-bottom-margin disable-select">
+        <div class="col s6 left-align">
+              <h5 id="milliseconds"><span class="blue-text">Time: </span><span id="timerText" class="light-blue-text text-darken-4"></span></h5>
+        </div>
+        <div class="col s6 right-align blue-text"><h5 id="selectWord">Workout the word below</h5></div>
+        <div class="col s12 left-align">
+          <h5 id="tries"><span class="blue-text">Tries: </span><span id="triesText" class="light-blue-text text-darken-4">3</span></h5>
+        </div>
+      </div>
+      <div class="row">
+        <div id="mainWordDiv" class="col s12 center-align blue-text">
+          <h1 id="mainWord">WORD</h1>
+        </div>
+      </div>
+
+      <div id="jumbles">
+        <div class="row disable-select">
+          <div class="col s12 m12 l6 center-align">
+            <div id="jumbleOne" class="jumbleButton btn-large light-blue">WORDS</div>
+          </div>
+          <div class="col s12 m12 l6 center-align">
+            <div id="jumbleTwo" class="jumbleButton btn-large light-blue">WORDS</div>
+          </div>
+          <div class="col s12 m12 l6 center-align">
+            <div id="jumbleThree" class="jumbleButton btn-large light-blue">WORDS</div>
+          </div>
+          <div class="col s12 m12 l6 center-align">
+            <div id="jumbleFour" class="jumbleButton btn-large light-blue">WORDS</div>
+          </div>
+        </div>
+      </div>
+
+        <div class="row disable-select" id="results-row">
+          <div class="col s12 center-align">
+            <h3 id="result" class="no-top-margin"><span id="goodResult"></span><span id="badResult"></span></h3>
+        </div>
+
+        <div class="col s12 center-align">
+          <div class="center-align btn-large controlButton red darken-1" id="tryAgain">Retry</div>
+        </div>
+
+        <div class="col s12 center-align">
+            <div class="btn-large controlButton green" id="continue">Continue</div>
+         </div>
+
+        <div class="col s12 center-align">
+            <div class="btn-large controlButton no-lf-padding blue lighten-1" id="startAgain">Play Again?</div> 
+         </div>
+      </div>      
+    </div>
+
+      <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/app.js"></script>
+    </body>
+  </html>

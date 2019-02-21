@@ -1,0 +1,191 @@
+*:not(body):not(html) {
+	//border: 1px dashed grey;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	//background-color: #e1f5fe;
+	background-color: #fff;
+}
+
+.disable-select {
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
+
+#title {
+	margin-bottom: 10px;
+}
+
+#mainContent {
+	height: 38rem;
+	width: 100%;
+	max-width: 900px;
+	//border: 1px solid black;
+	margin: 3rem auto;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+#mainWordDiv {
+	margin-bottom: 30px;
+}
+
+#mainWord {
+	font-size: 6rem;
+	font-weight: black;
+	margin-top: 40px;
+	margin-bottom: 0;
+}
+
+#milliseconds {
+	cursor: pointer;
+}
+
+#tries {
+	cursor: pointer;
+}
+
+.aBorder {
+	border: 1px solid black;
+}
+
+.btn-large {
+	//border: 1px solid black;
+	padding: 0;
+	font-size: 3rem;
+	-webkit-box-sizing: border-box; 
+  	-moz-box-sizing: border-box;   
+  	box-sizing: border-box;  
+}
+
+.btnContain {
+	height: 60px;
+}
+
+.center {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#top-title {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#milliseconds {
+	margin: 8px 0;
+}
+
+#results-row {
+	margin-top: 100px;
+}
+
+#tries {
+	margin: 0;
+}
+
+.card-panel {
+	padding: 10px 20px;
+}
+
+#tryAgain {
+	display: none;
+}
+
+#continue {
+	display: none;
+}
+
+#startAgain {
+	display: none;
+}
+
+.controlButton {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.no-bottom-margin {
+	margin-bottom: 0;
+}
+.no-top-margin {
+	margin-top: 0;
+}
+.no-lf-padding {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.jumbleButton {
+	width: 380px;
+}
+
+#goodResult {
+	color: #4caf50;
+}
+#badResult {
+	color: #ff5252;
+}
+
+
+/* RESPONSIVE STYLES */
+
+@media (max-width: 992px) {
+	#mainContent {
+		width: 96%;
+		height: 45rem;
+		margin-top: 10px;
+	}
+	#mainWordDiv {
+		margin-bottom: 10px;
+	}
+	#mainWord {
+		margin-top: 10px;
+	}
+	#selectWord {
+		display: none;
+	}
+	.btn-large {
+		width: 70%;
+		font-size: 2.6rem;
+		height: 3.8rem;
+	}
+}
+
+@media (max-width: 740px) {
+	#mainContent {
+		width: 94%;
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 540px) {
+	#mainContent {
+		width: 100%;
+	}
+}
+
+@media (max-width: 420px) {
+	#top-title {
+		font-size: 2.5rem;
+	}
+	#title {
+		margin-bottom: 0;
+	}
+	#tag-line {
+		margin-top: 0;
+	}
+	#mainWord {
+		font-size: 4rem;
+	}
+	.btn-large {
+		width: 90%;
+		font-size: 2.3rem;
+	}
+}
+

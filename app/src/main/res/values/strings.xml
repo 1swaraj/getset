@@ -1,0 +1,17 @@
+<resources>
+    <string name="facebook_app_id">284226959094077</string>
+    <string name="fb_login_protocol_scheme">fb284226959094077</string>
+    <string name="app_name">GetSet Ventures</string>
+    <string name="FACEBOOK_APP_ID">284226959094077</string>
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN">6dce20fd7c9eb3bcf1df39d058ca3bc6</string>
+    <string name="title_1">Logical and Reasoning Aptitude</string>
+    <string name="title_2">Spatial Aptitude</string>
+    <string name="title_3">Numerical Aptitude</string>
+    <string name="title_4">Verbal Aptitude</string>
+    <string name="title_5">REA</string>
+    <string name="text_1">Logical reasoning tests (also known as critical reasoning tests) are designed to assess a candidate\'s ability at skills such as how to interpret patterns, number sequences or the relationships between shapes.</string>
+    <string name="text_2">A person with spatial aptitude has the ability to understand three dimensional shapes. The ability to imagine the movement and interaction of objects and shapes is a characteristic of spatial aptitude.</string>
+    <string name="text_3">Numerical aptitude refers to an individual\'s capacity to quickly perform mathematical operations.</string>
+    <string name="text_4">Verbal Aptitude is the ability to use the written language and to understand concepts presented through words.</string>
+    <string name="text_5">Rapid Evaluation Ability is the ability of an individual to access the situation quickly.</string>
+</resources>

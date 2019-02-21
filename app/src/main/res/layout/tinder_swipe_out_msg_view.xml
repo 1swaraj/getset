@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="@dimen/_380sdp"
+    android:gravity="left"
+    android:layout_height="@dimen/_400sdp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_30sdp"
+        android:textStyle="bold"
+        android:layout_margin="@dimen/_40sdp"
+        android:background="@drawable/textview"
+        android:textColor="@android:color/holo_red_light"
+        android:text=" I Hate It "/>
+</LinearLayout>

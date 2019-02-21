@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rel"
+    tools:context=".Login">
+
+    <include layout="@layout/video_bg" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textAlignment="center"
+        android:fontFamily="cursive"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:text="Gamified Career Guidance"
+        android:textSize="@dimen/_40sdp"
+        android:textColor="#fff"
+        android:layout_above="@+id/linearLayout"
+        android:layout_marginBottom="@dimen/_15sdp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Login Using"
+        android:textSize="@dimen/_18sdp"
+        android:textColor="#fff"
+        android:layout_above="@+id/linearLayout"
+        android:layout_marginBottom="@dimen/_15sdp"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/facebook"
+            android:layout_marginHorizontal="@dimen/_25sdp"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/facebook"
+            android:gravity="center"
+            android:layout_weight="1" />
+        <ImageButton
+            android:id="@+id/google"
+            android:layout_marginHorizontal="@dimen/_25sdp"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/google"
+            android:gravity="center"
+            android:layout_weight="1" />
+        <ImageButton
+            android:layout_marginHorizontal="@dimen/_25sdp"
+            android:id="@+id/phone"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/phone"
+            android:gravity="center"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="0px"
+        android:layout_height="0px" />
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp" />
+</RelativeLayout>
